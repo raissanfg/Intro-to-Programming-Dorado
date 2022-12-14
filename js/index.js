@@ -1,26 +1,38 @@
-const today = new Date();
-const thisYear = today.getFullYear();
-const footer = document.querySelector('footer');
-const copyRight = document.createElement('p');
+// copyright on footer
+const renderCopyright = () => {
+    const today = new Date();
+    const thisYear = today.getFullYear();
 
-copyRight.innerHTML = `&copy Raissa Gomes ${thisYear}`;
-footer.appendChild(copyRight);
+    const copyright = document.querySelector('#copyright')
+    
+    copyright.innerHTML = `&copy; Raissa Gomes ${thisYear}`
 
-const skills = ['HTML' 'CSS' 'JavaScript'];
-const skillsSection = document.getElementById('skills');
+}
+
+
+//skilss section
+const renderSkillsList = () => {
+const skills = ['JavaScript', 'HTML', 'CSS', 'GIT']
+
+
+//DOM
+const skillsSection = document.getElementById('#skills');
 const skillsList = skillsSection.querySelector('ul')
 
 for (let i = 0; i < skills.length; i++) {
     const skill = document.createElement('li');
     skill.innerHTML = skills[i];
     skillsList.appendChild(skill);
+    
+ }
 }
+
 
 const messageForm = document.getElementsByName('leave_message');
 const messageSection = document.getElementById('messages');
 messageSection.hidden = true;
 
-messageForm.item(0).addEventListener('submit' , (event) => {
+messageForm.item(0).addEventListener('submit', (event) => {
     event.preventDefault();
     const name = event.target.name.value;
     const email = event.target.email.value;
@@ -29,6 +41,10 @@ messageForm.item(0).addEventListener('submit' , (event) => {
     console.log(name);
     console.log(email);
     console.log(message);
+
+    if (!name || !email ||!message) {
+        return
+    }
 
 const messageList = messageSection.querySelector('ul');
     const newMessage = document.createElement('li');
@@ -47,5 +63,3 @@ const messageList = messageSection.querySelector('ul');
     messageSection.hidden = false;
     messageForm.item(0).reset();
 });
-
-
