@@ -9,24 +9,26 @@ const renderCopyright = () => {
 
 }
 
+renderCopyright();
 
-//skilss section
+//skills section
 const renderSkillsList = () => {
 const skills = ['JavaScript', 'HTML', 'CSS', 'GIT']
 
 
 //DOM
-const skillsSection = document.getElementById('#skills');
+const skillsSection = document.getElementById('skills');
 const skillsList = skillsSection.querySelector('ul')
 
 for (let i = 0; i < skills.length; i++) {
     const skill = document.createElement('li');
     skill.innerHTML = skills[i];
     skillsList.appendChild(skill);
-    
+
  }
 }
 
+renderSkillsList();
 
 const messageForm = document.getElementsByName('leave_message');
 const messageSection = document.getElementById('messages');
