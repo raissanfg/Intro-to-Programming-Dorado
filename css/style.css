@@ -6,10 +6,10 @@
 
 body{
     background-color: black;
-  }
+}
 
-  /* Navegation bar */
-nav {
+ /* Navegation bar */
+#main-menu {
     width: 100%;
     position: fixed;
     top: 0;
@@ -23,13 +23,13 @@ nav {
     font-family: 'Blanka', sans-serif;
 }
 
-nav ul li{
+#main-menu ul li{
     list-style: none;
     display: inline-block;
     margin-left: 45px;
 }
 
-nav ul li a{
+#main-menu ul li a{
     color: antiquewhite;
     text-decoration: none;
     font-size: 20px;
@@ -37,21 +37,18 @@ nav ul li a{
 
 /* video*/
 .home-video{
-    position: relative;
     width: 100%;
+    height: auto;
     top: 0;
-    height: auto;   
+    padding-bottom: 2%;
 }
 
-h1 {
+h2 {
     font-family: 'Blanka', sans-serif;
     color: antiquewhite;
     text-align: center;                                           
-    font-size: 75px;
+    font-size: 55px;
     font-weight: bold;
-    margin: 100px;
-    padding-top: 50px;
-    padding-bottom: 50px;
 }
 
 /* about me section*/
@@ -67,11 +64,10 @@ h1 {
     border-style: none;
     text-align: justify;
     margin-top: 100px;
-    margin-bottom: 100px;
-    margin-right: 80px;
-    margin-left: 140px;
+    margin-right: auto;
+    margin-left: 150px;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 25px;
+    font-size: 23px;
     height: 200px;
     width: 50%;
 }
@@ -90,6 +86,12 @@ img {
 }
 
 /* experience section */
+#exp {
+    padding-top: 3%;
+    padding-bottom: 7%;
+ 
+}
+
 table {
     padding: 30px 50px 100px 50px;
     width: 70%;
@@ -121,41 +123,64 @@ table, th {
   font-size: 20px;
 }
 
-#proj {
-    background-color: #222222;
-   font-size: 20px;
-   text-align: center; 
-   text-decoration: none;
-   color: white;
-   margin: 100px;
-   padding-top: 50px;
-   padding-bottom: 50px;
-   list-style-type: none;
-    
-
+/* skill section */
+#skll {
+    padding-top: 10%;
+    padding-bottom: 7%;
 }
 
-/* skill section */
-#skills {
-    padding: 30px 50px 100px 50px;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+#skills ul {
+    padding-left: 20%;
 }
 
 .skl {
-    width: 18%;
-    border: 5px double;
+    width: 12%;
+    border: 3px double;
     color: antiquewhite;
-    font-size: 30px;
+    font-size: 22px;
     text-align: center;
     display: inline-block;
-    padding: 16px;
-    margin-bottom: 0.5rem;
-    margin-left: 70px; 
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 3%;
+    margin-right: 3%;
+    overflow-wrap: break-word;
+    
 }
 
+/* projects section */
+#prj {
+    padding-top: 10%;
+    padding-bottom: 8%;
+}
+
+#proj {
+    width: 25%;
+    border: 3px double;
+    color: antiquewhite;
+    font-size: 22px;
+    text-align: center;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 37%;
+    overflow-wrap: break-word;
+}
+
+
 /* leave a message section */
+
+#msg {    
+    padding-top: 10%;
+    padding-bottom: 10%;  
+ } 
+
+#leave_message {
+    padding-bottom: 8%;  
+}   
+
 form{
     width: 25em;
     max-width: 90%;
@@ -170,8 +195,7 @@ form{
     gap: 20px;
     padding: 20px;
 }  
-     
-       
+  
 input[type=text], select {
     width: 100%;
     padding: 12px 20px;
@@ -211,37 +235,49 @@ button{
     cursor: pointer;    
 }
 
+/* messages left for the user section */
+
+#the-message {
+    padding-bottom: 8%;  
+}
+
 .message-box {
+   width: 45%;
+   border: 3px double;
    background-color: #222222;
-   font-size: 20px;
+   font-size: 22px;
    text-align: center; 
    text-decoration: none;
    color: white;
-   margin: 40px;
-   padding-top: 50px;
-   padding-bottom: 50px;
+   margin: 20px;
    list-style-type: none;
 }  
-   
-  
+
+ 
 /* footer */
-.footer-nav{
-    padding-top: 20px;
+#footer-nav {
+    width: 100%;
+    padding: 10px 8%;
+    padding-left: 30px;
+    padding-right: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+
+#copyright {   
+    font-family: 'Blanka', sans-serif;
+    color: #414040;;
+    padding-left: 30px;
+}
+
+#footer-nav ul {
     list-style: none;
-    display:block;
-    position: relative;
+    padding-left: 60px;
+    display: flex;  
 }
 
-.container {
-    padding: 30px;
-    margin: 0 auto;
-    max-width: 1024px;
-    width: 90vw;
-    color: antiquewhite;
-    margin-top: 40px;
-    margin-left: 20px; 
-}
-
+/* footer social media*/
 .fa {
     padding: 17px;
     font-size: 30px;
@@ -274,39 +310,109 @@ button{
     background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
 }
 
-#copyright {   
-    margin-right: 20px;
-} 
+/* Media Query for Mobile Devices */
+ @media screen and (max-width: 480px) {
 
+    .home-video{
+        width: 120%;
+        padding-bottom: 1px;
+    }
 
-@media (max-width: 600px) {
-    *{
+    #main-menu ul li a{
+        font-size: 10px;
+    }
+
+	#img-riri {
+        display: none;
+    }
+    
+    #abt {
+        font-size: 25px;
+        margin-right: 10px;
+        margin-left: 60px; 
+    }
+
+   #about-me { 
+        margin-right: 10px;
+        margin-left: 30px;
+        width: 110%;
+        font-size: 20px;
+    }
+
+    #exp {
+        font-size: 25px;
+        padding-top: 10px;
+        margin-right: 10px;
+        margin-left: 70px; 
+    }
+
+    #skll {
+        font-size: 25px;
+        padding-top: 30%;
+        margin-right: 10px;
+        margin-left: 50px;
+    }
+
+    #prj {
+        font-size: 25px;
+        padding-top: 30%;
+        margin-right: 10px;
+        margin-left: 80px;
+    }
+
+    table, th, td {
+        margin-right: 10px;
+        margin-left: 50px; 
+      }
+
+    .skl {
+        margin-right: 20px;
+        margin-left: 10px; 
+    }
+
+    #skills ul{
        
+        padding-left: 90px;
+    }  
+
+    #projects ul {
+        padding-left: 80px;
         
     }
+
+    #msg {
+        font-size: 25px;
+        padding-top: 20px;
+        margin-right: 10px;
+        margin-left: 20px; 
+    }
+
+    #leave_message {
+        font-size: 25px;
+        padding-top: 30%;
+        margin-right: 10px;
+        margin-left: 80px; 
+    }
+    
+   #messages{
+    margin-left: 90px;
+    overflow-wrap: break-word;
+   }
+
 }
-/*@media screen and (min-width: 1px) {
 
-    body {
-        overflow-block
-    }
-	#img-riri {
-        display: block;
-        margin-right: auto;
-        margin-left: auto;
+/* Media Query for Tablets */
+@media screen and (max-width: 768px) {
+    #about {
+        padding-bottom: 50%;
     }
 
-    #about-me {
-        font-size: 20px;
-        width: 80%;
+}
+
+/*Media Query for Laptops and Desktops */
+@media screen and (max-width: 1024px) {
+
+    #exp {
         padding-top: 60px;
-        padding-bottom: 60px;
-        margin-right: 60px;
-        margin-left: 60px;
     }
-    
-    
-   
-
 }
-    

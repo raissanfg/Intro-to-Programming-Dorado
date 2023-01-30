@@ -11,6 +11,7 @@ const renderCopyright = () => {
 
 renderCopyright();
 
+
 //skills section
 const renderSkillsList = () => {
 const skills = ['HTML', 'CSS', 'JavaScript', 'GIT']
@@ -86,6 +87,6 @@ const projectList = projectSection.querySelector('ul')
 
  }
  githubRequest.send()
- 
+
 });
 
