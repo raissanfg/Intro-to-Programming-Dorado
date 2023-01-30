@@ -68,25 +68,33 @@ const messageList = messageSection.querySelector('ul');
     messageForm.item(0).reset();
 });
 
-const githubRequest = new XMLHttpRequest();
-githubRequest.open('GET', 'https://api.github.com/users/raissanfg/repos');
-githubRequest.send();
-githubRequest.addEventListener('load', function() {
-const data = JSON.parse(this.response)
+//const githubRequest = new XMLHttpRequest();
+//githubRequest.open('GET', 'https://api.github.com/users/raissanfg/repos');
+//githubRequest.send();
+//githubRequest.addEventListener('load', function() {
+//const data = JSON.parse(this.response)
 
-const projectSection = document.querySelector('#projects')
-const projectList = projectSection.querySelector('ul')
+//const projectSection = document.querySelector('#projects')
+//const projectList = projectSection.querySelector('ul')
 
- for (let i=0; i < repositories.length; i++) {
-    var project = document.createElement('li');
-    var repositoryLink = document.createElement('a');
-    repositoryLink.href = repositories[i].html_url;
-    repositoryLink.innerHTML = repositories[i].name;
-    projectList.appendChild(project);
-    project.appendChild(repositoryLink);
+ //for (let i=0; i < repositories.length; i++) {
+ //   var project = document.createElement('li');
+ //   var repositoryLink = document.createElement('a');
+ //   repositoryLink.href = repositories[i].html_url;
+ //   repositoryLink.innerHTML = repositories[i].name;
+ //   projectList.appendChild(project);
+ //   project.appendChild(repositoryLink);
 
- }
- githubRequest.send()
+// }
+// githubRequest.send()
 
-});
+//});
+
+function renderProjectsWithFetch() {
+    fetch('http://api.github.com/user/raissanfg/repos')
+    .then((res) => res.json())
+    .then((data) => {
+
+    })
+}
 
