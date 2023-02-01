@@ -30,10 +30,13 @@ body{
 }
 
 #main-menu ul li a{
+    border: none;
     color: antiquewhite;
     text-decoration: none;
     font-size: 20px;
 }
+
+
 
 /* video*/
 .home-video{
@@ -68,7 +71,6 @@ h2 {
     margin-left: 150px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 23px;
-    height: 200px;
     width: 50%;
 }
 
@@ -149,23 +151,35 @@ table, th {
 }
 
 /* projects section */
-#prj {
-    padding-top: 10%;
-    padding-bottom: 8%;
+
+#projects {
+    padding-left: 5%;
 }
 
-#proj {
-    width: 25%;
+#prj {
+    padding-right: 5%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+#projects ul li  {
+    width: 30%;
     border: 3px double;
     color: antiquewhite;
-    font-size: 22px;
     text-align: center;
+    font-size: 22px;
     display: inline-block;
     padding: 10px;
-    margin-top: 20px;
     margin-bottom: 20px;
-    margin-left: 37%;
+    margin-left: 10px;
+    margin-right: 10px;
     overflow-wrap: break-word;
+    list-style-type: none;
+}
+
+#projects ul li a {
+    color: antiquewhite;
+    font-size: 20px;
 }
 
 /* leave a message section */
@@ -245,7 +259,7 @@ button{
    text-align: center; 
    text-decoration: none;
    color: white;
-   margin: 20px;
+   margin-left: 27%;
    list-style-type: none;
 }  
 
@@ -322,37 +336,32 @@ button{
     }
     
     #abt {
-        font-size: 25px;
+        font-size: 22px;
+
         margin-right: 10px;
-        margin-left: 60px; 
+        margin-left: 50px;
     }
 
    #about-me { 
-        margin-right: 10px;
-        margin-left: 30px;
-        width: 110%;
-        font-size: 20px;
+       width: 15em;
+       font-size: 20px;
+       padding-top: 5px;
+       padding-bottom: 5%;
+       margin-right: 10px;
+       margin-left: 30px; 
     }
 
     #exp {
-        font-size: 25px;
-        padding-top: 10px;
+        font-size: 22px;
         margin-right: 10px;
         margin-left: 70px; 
     }
 
     #skll {
-        font-size: 25px;
+        font-size: 22px;
         padding-top: 30%;
         margin-right: 10px;
         margin-left: 50px;
-    }
-
-    #prj {
-        font-size: 25px;
-        padding-top: 30%;
-        margin-right: 10px;
-        margin-left: 80px;
     }
 
     table, th, td {
@@ -366,24 +375,32 @@ button{
     }
 
     #skills ul{
-       
         padding-left: 90px;
     }  
 
-    #projects ul {
-        padding-left: 80px;
-        
+    #prj {
+        font-size: 22px;
+        padding-top: 30%;
+        margin-right: 10px;
+        margin-left: 80px;
+    }
+
+    
+    #projects ul li {
+      width: auto;
+      align-items: center;
+       
     }
 
     #msg {
-        font-size: 25px;
+        font-size: 22px;
         padding-top: 20px;
         margin-right: 10px;
         margin-left: 20px; 
     }
 
     #leave_message {
-        font-size: 25px;
+        font-size: 22px;
         padding-top: 30%;
         margin-right: 10px;
         margin-left: 80px; 
@@ -398,8 +415,24 @@ button{
 /* Media Query for Tablets */
 @media screen and (max-width: 768px) {
     #about {
-        padding-bottom: 50%;
+    
+        padding-bottom: 20px;
     }
+    #img-riri {
+        display: none;
+    }
+    #prj {
+        padding-bottom: 55px;
+    }
+
+    #projects ul {
+        margin-left: 10%;         
+      }
+
+    #projects ul li {
+        width: auto; 
+      }  
+  
 }
 
 /*Media Query for Laptops and Desktops */
