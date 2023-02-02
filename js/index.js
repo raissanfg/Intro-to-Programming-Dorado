@@ -85,15 +85,13 @@ const projectList = projectSection.querySelector('ul')
     projectList.appendChild(project);
     project.appendChild(repositoryLink);
 
- }
-});
+ }});
 
 function renderProjectsWithFetch() {
-    fetch('http://api.github.com/user/raissanfg/repos')
+    fetch('http://api.github.com/users/raissanfg/repos')
     .then((res) => res.json())
     .then((data) => {
 
-    const repositories = JSON.parse(this.response)
     const projectSection = document.querySelector('#projects')
     const projectList = projectSection.querySelector('ul')
 
@@ -102,12 +100,9 @@ function renderProjectsWithFetch() {
          var repositoryLink = document.createElement('a');
          repositoryLink.href = repositories[i].html_url;
          repositoryLink.innerHTML = repositories[i].name;
-         projectList.appendChild(project);
-         project.appendChild(repositoryLink);
-         proja.setAttribute('id', 'proja')
+       
+         
         
- }
-    })
-    renderProjectsWithFetch();
-}
+}})}
+renderProjectsWithFetch();
 
