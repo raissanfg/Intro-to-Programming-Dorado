@@ -12,44 +12,42 @@
   
   <style>
     @import url('https://fonts.cdnfonts.com/css/blanka');
-</style>
-
-
+  </style>
 </head>
 
 <body> 
   <div class="menu">
     <header>
-
-      <video autoplay loop muted width="720" height="480" class="home-video">
+      <video autoplay loop muted class="home-video">
          <source src="images/video.mp4" type="video/mp4">
       </video>
 
-
-      <nav>
+      <nav id="main-menu">
         <a href="index.html">
-           <img  id="logo" src="images/logo.png"  alt="logo">
+         <img  id="logo" src="images/logo.png"  alt="logo">
         </a>
-     
+        
         <ul>
-           <li><a href="#">Home</a></li> 
-           <li><a href="#about">About</a></li>
-           <li><a href="#experience">Experience</a></li>
-           <li><a href="#skills">Skills</a></li>
+           <li id="na"><a id="hel"href="#">Home</a></li> 
+           <li id="na"><a href="#about">About</a></li>
+           <li id="na"><a href="#experience">Experience</a></li>
+           <li id="na"><a href="#skills">Skills</a></li>
+           <li id="na"><a href="#projects">Projects</a></li>
+           <li id="na"><a href="#leave_message">Message </a></li>
         </ul>
       </nav>
     </header>
   </div>
   
   <section id="about">
-     <h1>ABOUT</h1>
+     <h2 id="abt">ABOUT</h2>
      <img id="img-riri" src="images/riri.png" alt="riri">
-     <p id="about-me">Hi, My name is  Raíssa, I was born and raised in São Paulo Brazil. I moved to the USA in 2013, I now live in Chicago. I'm currently a student at Code the Dream, I am learning front-end development skills, and I hope to one day become a Software Developer.</p>  
+     <p id="about-me">Hello! Welcome to my first webpage. My name is Raíssa Gomes, I'm an immigrant from Brazil, and I have been living in Chicago for the past decade. Recently I started my journey in the tech world, learning how to code. <br>
+      I'm currently a student at Code the Dream, and I'm learning the essentials of frontend development, and  hope to one day become a Software Developer.</p>
   </section>
 
-
   <section id="experience">
-     <h1>EXPERIENCE</h1>
+     <h2 id="exp">EXPERIENCE</h2>
      <table>
       <tr>
         <th>Role</th>
@@ -75,30 +73,33 @@
         <td> 07/2017 - 03/2018</td>
       </tr>
     </table>
-
   </section>
 
   <section id="skills">
-    <h1>SKILLS</h1>
+    <h2 id="skll">SKILLS</h2>
     <ul>
-      <li class="skl">HTML</li>
-      <li class="skl">CSS</li>
-      <li class="skl">JAVASCRIPT</li>
-      <li class="skl">GIT</li> 
+      <!--Added trought JavaScript-->
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2 id="prj"> Projects</h2>
+    <ul>
+     <!-- Added trought JavaScript -->
     </ul>
   </section>
 
   <section id="leave_message">
-   <h1>LEAVE A MESSAGE!</h1>
+   <h2 id="msg">LEAVE A MESSAGE!</h2>
      <form name="leave-a-message"> 
       
-        <label for="name">Name</label><br>
+        <label for="name">Name</label>
         <input type="text" id="name" name="name" required="true"> 
       
-        <label for="email">Email Address</label><br>
+        <label for="email">Email Address</label>
         <input type="email" id="email" name="email" required="true"> 
       
-        <label for="message">Message</label><br>
+        <label for="message">Message</label>
         <textarea type="message" id="message" name="message" required="true"></textarea><br>
       
          <button id="button" type="submit">Submit</button><br> 
@@ -107,31 +108,37 @@
   </section>
 
   <section id="messages">
-     <h1 id="message-box">MESSAGES</h1>
-       <ul>
-
-      </ul>
+     <h2 id="the-message">MESSAGES</h2>
+       <ul class="message-box"></ul>
   </section>
 
    <footer>
-     <div class="container">
-      <nav class="footer-nav">
+      <nav id="footer-nav">
       <p id="copyright">
         <!--added trought JavaScript-->
       </p>
-    
-       <a href="https://www.linkedin.com/in/ra%C3%ADssa-g-6808531b8/" class="fa fa-linkedin"></a>
-       <a href="https://github.com/raissanfg" class="fa fa-github"></a>
-       <a href="https://twitter.com/raissanfg" class="fa fa-twitter"></a>
-       <a href="https://www.instagram.com/raissanfg/" class="fa fa-instagram"></a>
+
+      <ul>
+       <li> 
+         <a href="https://www.linkedin.com/in/raissa-g" class="fa fa-linkedin"></a>
+       </li>
+
+       <li> 
+         <a href="https://github.com/raissanfg" class="fa fa-github"></a> 
+       </li>
+
+       <li> 
+         <a href="https://twitter.com/raissanfg" class="fa fa-twitter"></a>
+       </li>
         
+       <li> 
+        <a href="https://www.instagram.com/raissanfg/" class="fa fa-instagram"></a>
+       </li>
+       </ul> 
       </nav>
-    </div>
    </footer>
-  
   
     <script src="js/index.js"></script>
    </body>
-
 </html>
 

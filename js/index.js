@@ -11,9 +11,10 @@ const renderCopyright = () => {
 
 renderCopyright();
 
+
 //skills section
 const renderSkillsList = () => {
-const skills = ['JavaScript', 'HTML', 'CSS', 'GIT']
+const skills = ['HTML', 'CSS', 'JavaScript', 'GIT']
 
 
 //DOM
@@ -23,14 +24,14 @@ const skillsList = skillsSection.querySelector('ul')
 for (let i = 0; i < skills.length; i++) {
     const skill = document.createElement('li');
     skill.innerHTML = skills[i];
+    skill.className = 'skl';
     skillsList.appendChild(skill);
-
  }
 }
 
 renderSkillsList();
 
-const messageForm = document.getElementsByName('leave_message');
+const messageForm = document.getElementsByName('leave-a-message');
 const messageSection = document.getElementById('messages');
 messageSection.hidden = true;
 
@@ -47,6 +48,7 @@ messageForm.item(0).addEventListener('submit', (event) => {
     if (!name || !email ||!message) {
         return
     }
+
 
 const messageList = messageSection.querySelector('ul');
     const newMessage = document.createElement('li');
@@ -65,3 +67,42 @@ const messageList = messageSection.querySelector('ul');
     messageSection.hidden = false;
     messageForm.item(0).reset();
 });
+
+const githubRequest = new XMLHttpRequest();
+githubRequest.open('GET', 'https://api.github.com/users/raissanfg/repos');
+githubRequest.send();
+githubRequest.addEventListener('load', function() {
+const repositories = JSON.parse(this.response)
+
+const projectSection = document.querySelector('#projects')
+const projectList = projectSection.querySelector('ul')
+
+ for (let i=0; i < repositories.length; i++) {
+    var project = document.createElement('li');
+    var repositoryLink = document.createElement('a');
+    repositoryLink.href = repositories[i].html_url;
+    repositoryLink.innerHTML = repositories[i].name;
+    projectList.appendChild(project);
+    project.appendChild(repositoryLink);
+
+ }});
+
+function renderProjectsWithFetch() {
+    fetch('http://api.github.com/users/raissanfg/repos')
+    .then((res) => res.json())
+    .then((data) => {
+
+    const projectSection = document.querySelector('#projects')
+    const projectList = projectSection.querySelector('ul')
+
+         for (let i=0; i < repositories.length; i++) {
+         var project = document.createElement('li' );
+         var repositoryLink = document.createElement('a');
+         repositoryLink.href = repositories[i].html_url;
+         repositoryLink.innerHTML = repositories[i].name;
+       
+         
+        
+}})}
+renderProjectsWithFetch();
+
