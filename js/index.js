@@ -92,6 +92,7 @@ function renderProjectsWithFetch() {
     .then((res) => res.json())
     .then((data) => {
 
+    
     const projectSection = document.querySelector('#projects')
     const projectList = projectSection.querySelector('ul')
 
@@ -101,8 +102,10 @@ function renderProjectsWithFetch() {
          repositoryLink.href = repositories[i].html_url;
          repositoryLink.innerHTML = repositories[i].name;
        
-         
+         renderProjectsWithFetch();   
         
-}})}
-renderProjectsWithFetch();
+}
+})
+}
+
 
